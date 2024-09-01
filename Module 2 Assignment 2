@@ -1,0 +1,24 @@
+START
+
+// Plan: Initialize variables
+SET accountBalance = 0
+SET overDrawnCount = 0
+SET overDrawnFee = 0
+SET newAccountBalance = 0
+
+// Input: Collect account balance and overdraft count
+PRINT "Enter the current account balance: "
+INPUT accountBalance
+PRINT "Enter the number of times the account was overdrawn: "
+INPUT overDrawnCount
+
+// Process: Calculate the overdraft fee and update the balance
+SET overDrawnFee = (accountBalance * 0.01) - (5 * overDrawnCount)
+SET newAccountBalance = accountBalance - overDrawnFee
+
+// Output: Display the fee and the updated balance
+PRINT "The calculated overdraft fee is: $", overDrawnFee
+PRINT "The new account balance is: $", newAccountBalance
+PRINT "Thanks for using this program!"
+
+STOP
