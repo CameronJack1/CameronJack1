@@ -1,0 +1,28 @@
+START
+
+// Plan: Initialize variables
+SET modelName = ""
+SET heightInches = 0
+SET widthInches = 0
+SET depthInches = 0
+SET cubicFeet = 0
+SET CUBIC_INCHES_IN_A_CUBIC_FOOT = 1728
+
+// Input: Collect refrigerator model and dimensions
+PRINT "Enter the refrigerator model name: "
+INPUT modelName
+PRINT "Enter the interior height in inches: "
+INPUT heightInches
+PRINT "Enter the interior width in inches: "
+INPUT widthInches
+PRINT "Enter the interior depth in inches: "
+INPUT depthInches
+
+// Process: Calculate the refrigerator capacity in cubic feet
+SET cubicFeet = (heightInches * widthInches * depthInches) / CUBIC_INCHES_IN_A_CUBIC_FOOT
+
+// Output: Display the model name and capacity
+PRINT "The model name is: ", modelName
+PRINT "The capacity in cubic feet is: ", cubicFeet
+
+STOP
